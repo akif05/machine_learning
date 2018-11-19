@@ -6,7 +6,6 @@ lib-cov
 *.out
 *.pid
 *.gz
-demo-churn-pred/
 pids
 logs
 results
@@ -18,4 +17,6 @@ npm-debug.log
 *.swo
 .DS_Store
 
+demo-churn-pred/
+Deep-Learning-A-Z/
 
