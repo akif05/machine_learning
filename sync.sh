@@ -1,14 +1,3 @@
-cd Machine_learning/
-pip install --upgrade tensorflow
-python3 -m pip install --upgrade https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-0.12.0-py3-none-any.whl
-pip install --upgrade keras
-cd Machine_learning
-vi Readme
-git init
-git add -A
-git commit "First commit"
-
-cat >./sync.sh <<EOL
 #!/bin/bash
 # Adding all files and pushing ot git repo
 # Need to be provied with comment and directory
@@ -19,18 +8,15 @@ if [ $# -ne 2 ]; then
   echo $#
   exit
 fi
+
 if [ ! -d "$1" ]; then
   echo "Directory $1 not exist."
   exit
 fi
+
 # Cd to directory which needs to be pushed to git reposytory
 cd $1
+
 git add -A
 git commit -a -m "$2"
-git push -u origin master
-# End of the script
-EOL
-
-git commit -m "first commit"
-git remote add origin https://github.com/akif05/machine_learning.git
 git push -u origin master
